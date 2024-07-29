@@ -124,6 +124,7 @@ local function gruvbox_material_dark_theme(toughness)
 	end
 
 	return {
+		-- yatline
 		section_separator_open = "",
 		section_separator_close = "",
 
@@ -159,6 +160,16 @@ local function gruvbox_material_dark_theme(toughness)
 		fail = { icon = "", fg = gruvbox_material_dark_palette.red },
 		found = { icon = "󰮕", fg = gruvbox_material_dark_palette.blue },
 		processed = { icon = "󰐍", fg = gruvbox_material_dark_palette.green },
+
+		-- yatline-githead
+		prefix_color = gruvbox_material_dark_palette.fg1,
+		branch_color = gruvbox_material_dark_palette.blue,
+		commit_color = gruvbox_material_dark_palette.purple,
+		stashes_color = gruvbox_material_dark_palette.purple,
+		state_color = gruvbox_material_dark_palette.red,
+		staged_color = gruvbox_material_dark_palette.yellow,
+		unstaged_color = gruvbox_material_dark_palette.orange,
+		untracked_color = gruvbox_material_dark_palette.aqua,
 	}
 end
 
@@ -278,16 +289,17 @@ local gruvbox_material_soft_light_palette = {
 --- @param toughness string Tougness of theme: "hard", "soft" or "medium".
 --- @return table theme Used in Yatline.
 local function gruvbox_material_light_theme(toughness)
-	local gruvbox_light_palette
+	local gruvbox_material_light_palette
 	if toughness == "hard" then
-		gruvbox_light_palette = gruvbox_material_hard_light_palette
+		gruvbox_material_light_palette = gruvbox_material_hard_light_palette
 	elseif toughness == "soft" then
-		gruvbox_light_palette = gruvbox_material_soft_light_palette
+		gruvbox_material_light_palette = gruvbox_material_soft_light_palette
 	else
-		gruvbox_light_palette = gruvbox_material_medium_light_palette
+		gruvbox_material_light_palette = gruvbox_material_medium_light_palette
 	end
 
 	return {
+		-- yatline
 		section_separator_open = "",
 		section_separator_close = "",
 
@@ -298,31 +310,41 @@ local function gruvbox_material_light_theme(toughness)
 		part_separator_close = "",
 
 		style_a = {
-			fg = gruvbox_light_palette.bg0,
+			fg = gruvbox_material_light_palette.bg0,
 			bg_mode = {
-				normal = gruvbox_light_palette.gray2,
-				select = gruvbox_light_palette.blue,
-				un_set = gruvbox_light_palette.orange
+				normal = gruvbox_material_light_palette.gray2,
+				select = gruvbox_material_light_palette.blue,
+				un_set = gruvbox_material_light_palette.orange
 			}
 		},
-		style_b = { bg = gruvbox_light_palette.bg5, fg = gruvbox_light_palette.fg1 },
-		style_c = { bg = gruvbox_light_palette.bg2, fg = gruvbox_light_palette.fg1 },
+		style_b = { bg = gruvbox_material_light_palette.bg5, fg = gruvbox_material_light_palette.fg1 },
+		style_c = { bg = gruvbox_material_light_palette.bg2, fg = gruvbox_material_light_palette.fg1 },
 
-		permissions_t_fg = gruvbox_light_palette.green,
-		permissions_r_fg = gruvbox_light_palette.yellow,
-		permissions_w_fg = gruvbox_light_palette.red,
-		permissions_x_fg = gruvbox_light_palette.aqua,
-		permissions_s_fg = gruvbox_light_palette.gray2,
+		permissions_t_fg = gruvbox_material_light_palette.green,
+		permissions_r_fg = gruvbox_material_light_palette.yellow,
+		permissions_w_fg = gruvbox_material_light_palette.red,
+		permissions_x_fg = gruvbox_material_light_palette.aqua,
+		permissions_s_fg = gruvbox_material_light_palette.gray2,
 
-		selected = { icon = "󰻭", fg = gruvbox_light_palette.yellow },
-		copied = { icon = "", fg = gruvbox_light_palette.green },
-		cut = { icon = "", fg = gruvbox_light_palette.red },
+		selected = { icon = "󰻭", fg = gruvbox_material_light_palette.yellow },
+		copied = { icon = "", fg = gruvbox_material_light_palette.green },
+		cut = { icon = "", fg = gruvbox_material_light_palette.red },
 
-		total = { icon = "󰮍", fg = gruvbox_light_palette.yellow },
-		succ = { icon = "", fg = gruvbox_light_palette.green },
-		fail = { icon = "", fg = gruvbox_light_palette.red },
-		found = { icon = "󰮕", fg = gruvbox_light_palette.blue },
-		processed = { icon = "󰐍", fg = gruvbox_light_palette.green },
+		total = { icon = "󰮍", fg = gruvbox_material_light_palette.yellow },
+		succ = { icon = "", fg = gruvbox_material_light_palette.green },
+		fail = { icon = "", fg = gruvbox_material_light_palette.red },
+		found = { icon = "󰮕", fg = gruvbox_material_light_palette.blue },
+		processed = { icon = "󰐍", fg = gruvbox_material_light_palette.green },
+
+		-- yatline-githead
+		prefix_color = gruvbox_material_light_palette.fg1,
+		branch_color = gruvbox_material_light_palette.blue,
+		commit_color = gruvbox_material_light_palette.purple,
+		stashes_color = gruvbox_material_light_palette.purple,
+		state_color = gruvbox_material_light_palette.red,
+		staged_color = gruvbox_material_light_palette.yellow,
+		unstaged_color = gruvbox_material_light_palette.orange,
+		untracked_color = gruvbox_material_light_palette.aqua,
 	}
 end
 
